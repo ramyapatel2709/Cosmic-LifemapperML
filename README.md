@@ -1,2 +1,2 @@
-# Cosmic-LifemapperML
+# Cosmic-Lifemapper
 
