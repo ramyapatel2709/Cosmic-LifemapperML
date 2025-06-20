@@ -1,0 +1,64 @@
+<!-- analyzer.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Exoplanet Biosignature Analyzer</title>
+  <link rel="stylesheet" href="css/stsila.css">
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+
+  <nav class="navbar navbar-dark bg-dark px-3">
+    <a class="navbar-brand text-white" href="choose.html">← Back</a>
+    <span class="navbar-text text-white">Biosignature Analyzer</span>
+  </nav>
+
+  <main class="container mt-5">
+    <h2 class="mb-4">Exoplanet Biosignature Analyzer</h2>
+
+    <!-- Sliders Section -->
+    <div class="mb-3">
+      <label for="methane">Methane Levels</label>
+      <input type="range" class="form-range" id="methane" min="0" max="100">
+    </div>
+    <div class="mb-3">
+      <label for="oxygen">Oxygen Levels</label>
+      <input type="range" class="form-range" id="oxygen" min="0" max="100">
+    </div>
+    <div class="mb-3">
+      <label for="temperature">Surface Temperature</label>
+      <input type="range" class="form-range" id="temperature" min="-100" max="100">
+    </div>
+
+    <div class="text-center my-4">
+      <button id="simulateBtn" class="btn btn-warning btn-lg">SIMULATIONS!!!</button>
+    </div>
+
+    <!-- Comparing Exoplanets Section -->
+    <section id="comparison" class="mt-5" style="display:none;">
+      <h3 class="text-center">Comparing Exoplanets</h3>
+      <div class="row mt-4">
+        <div class="col-md-6">
+          <div class="card p-3">
+            <h5>Planet A</h5>
+            <p>Methane: <span id="a_methane"></span></p>
+            <p>Oxygen: <span id="a_oxygen"></span></p>
+            <p>Temperature: <span id="a_temperature"></span></p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card p-3">
+            <h5>Planet B</h5>
+            <p>Methane: <span id="b_methane"></span></p>
+            <p>Oxygen: <span id="b_oxygen"></span></p>
+            <p>Temperature: <span id="b_temperature"></span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/analyzer.js"></script>
+</body>
+</html>
