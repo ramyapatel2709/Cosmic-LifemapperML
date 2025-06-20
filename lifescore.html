@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Life-Score Predictor</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #f5f5f5;
+      padding: 20px;
+    }
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .progress {
+      height: 30px;
+    }
+    .btn-purple {
+      background-color: #5e2ca5;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-dark bg-dark px-3">
+    <a class="navbar-brand text-white" href="choose.html">← Back</a>
+    <span class="navbar-text text-white">Life-Score Predictor</span>
+  </nav>
+
+  <div class="container mt-5">
+    <div class="card">
+      <h2 class="mb-4 text-center">Life-Score Predictor</h2>
+
+      <div class="mb-3">
+        <label for="planetName" class="form-label">Planet Name</label>
+        <input type="text" class="form-control" id="planetName" placeholder="Enter planet name">
+      </div>
+
+      <div class="mb-3">
+        <label for="oxygenLevel" class="form-label">Oxygen Level (%)</label>
+        <input type="number" class="form-control" id="oxygenLevel" placeholder="e.g. 21">
+      </div>
+
+      <div class="mb-3">
+        <label for="temperature" class="form-label">Temperature (°C)</label>
+        <input type="number" class="form-control" id="temperature" placeholder="e.g. 15">
+      </div>
+
+      <div class="text-center mt-4">
+        <button class="btn btn-purple" onclick="predictLifeScore()">Predict Life-Score</button>
+      </div>
+
+      <div class="mt-4">
+        <label class="form-label">Predicted Life-Score:</label>
+        <div class="progress">
+          <div id="lifeScoreBar" class="progress-bar progress-bar-striped" role="progressbar" style="width: 0%">0%</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function predictLifeScore() {
+      const oxygen = parseFloat(document.getElementById("oxygenLevel").value) || 0;
+      const temp = parseFloat(document.getElementById("temperature").value) || 0;
+
+      // Simple fake scoring logic
+      let score = Math.min(100, Math.max(0, (oxygen * 1.5 + (20 - Math.abs(15 - temp)) * 2)));
+
+      const bar = document.getElementById("lifeScoreBar");
+      bar.style.width = score + "%";
+      bar.textContent = Math.round(score) + "%";
+    }
+  </script>
+
+</body>
+</html>
