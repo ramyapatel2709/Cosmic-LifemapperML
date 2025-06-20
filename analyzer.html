@@ -104,5 +104,40 @@
   </div>
 </section>
 
+<script>
+  function comparePlanets() {
+    const p1 = document.getElementById("planet1").value;
+    const p2 = document.getElementById("planet2").value;
+
+    const data = {
+      "Kepler-442b": {
+        score: "0.85",
+        atmosphere: "Oxygen-rich"
+      },
+      "Proxima b": {
+        score: "0.67",
+        atmosphere: "Nitrogen-heavy"
+      },
+      "TRAPPIST-1d": {
+        score: "0.92",
+        atmosphere: "Carbon-rich"
+      }
+    };
+
+    document.getElementById("planet1-name").innerText = p1;
+    document.getElementById("planet2-name").innerText = p2;
+
+    document.getElementById("planet1-data").innerHTML =
+      `Life Score: ${data[p1].score}<br>Atmosphere: ${data[p1].atmosphere}`;
+    document.getElementById("planet2-data").innerHTML =
+      `Life Score: ${data[p2].score}<br>Atmosphere: ${data[p2].atmosphere}`;
+
+    document.getElementById("comparison-result").style.display = "flex";
+  }
+</script>
+
+</body>
+</html>
+
 </body>
 </html>
