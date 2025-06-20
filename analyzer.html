@@ -60,5 +60,49 @@
   </main>
 
   <script src="js/analyzer.js"></script>
+  <!-- 🔭 Exoplanet Comparison Section -->
+<section id="comparison" class="padding bg-grey">
+  <div class="container">
+    <div class="section-title text-center">
+      <h2>Compare Exoplanets</h2>
+      <p class="section-lead">Select two planets and compare their biosignature stats.</p>
+    </div>
+
+    <form id="compare-form" class="row">
+      <div class="col-md-6">
+        <label for="planet1">Planet 1</label>
+        <select class="form-control" id="planet1">
+          <option>Kepler-442b</option>
+          <option>Proxima b</option>
+          <option>TRAPPIST-1d</option>
+        </select>
+      </div>
+      <div class="col-md-6">
+        <label for="planet2">Planet 2</label>
+        <select class="form-control" id="planet2">
+          <option>Kepler-442b</option>
+          <option>Proxima b</option>
+          <option>TRAPPIST-1d</option>
+        </select>
+      </div>
+      <div class="col-12 text-center mt-4">
+        <button type="button" class="btn btn-primary" onclick="comparePlanets()">Compare</button>
+      </div>
+    </form>
+
+    <!-- Result Display -->
+    <div id="comparison-result" class="row mt-5" style="display:none;">
+      <div class="col-md-6 text-center">
+        <h4 id="planet1-name">Planet 1</h4>
+        <p id="planet1-data">Life Score: 0.85<br>Atmosphere: Oxygen-rich</p>
+      </div>
+      <div class="col-md-6 text-center">
+        <h4 id="planet2-name">Planet 2</h4>
+        <p id="planet2-data">Life Score: 0.67<br>Atmosphere: Nitrogen-heavy</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 </body>
 </html>
