@@ -40,29 +40,32 @@
     <!-- Left Transparent Box -->
     <div class="left-overlay-box">
       <h2 class="text-white mb-4">Physical Features</h2>
-      <input id="planetSearch" type="text" class="form-control search-bar mb-4" placeholder="Search for an exoplanet...">
+      <input type="text" id="planetSearch" placeholder="Search exoplanet..." autocomplete="off">
+<div id="autocomplete-box"></div>
+<div id="planetResult"></div>
+
 
       <!-- <div id="planetData" class="report-box"> -->
         <!-- Placeholder Report -->
-        <pre class="text-white">
-=== Exoplanet Report: Kepler-62b ===
-Planet Radius (Earth radii): 1.00
-Planet Mass (Earth masses): 1.00
-Star Effective Temperature (K): 4925.0
-Orbital Distance (AU): 0.050
-Orbital Eccentricity: 0.020
-Atmospheric Pressure (Earth atm): 1.00
-Albedo: 0.20
-Stellar Luminosity (Solar units): 0.210
-Host Star Metallicity [Fe/H]: 0.000
-Host Star Age (Gyr): 6.20
-Habitability Score: 0.000
-Cluster Assignment: 1 (Moderate to High Habitability Potential)
-PCA Components: [-1.873, 1.568, -0.178]
-Estimated Surface Temperature (K): 1004.4
-Surface Gravity (Earth g): 1.00
-Water Retention Potential: 0.000
-Radiation Hazard Index: 1.000</pre>
+        <!-- <pre class="text-white">
+      === Exoplanet Report: Kepler-62b ===
+      Planet Radius (Earth radii): 1.00
+      Planet Mass (Earth masses): 1.00
+      Star Effective Temperature (K): 4925.0
+      Orbital Distance (AU): 0.050
+      Orbital Eccentricity: 0.020
+      Atmospheric Pressure (Earth atm): 1.00
+      Albedo: 0.20
+      Stellar Luminosity (Solar units): 0.210
+      Host Star Metallicity [Fe/H]: 0.000
+      Host Star Age (Gyr): 6.20
+      Habitability Score: 0.000
+      Cluster Assignment: 1 (Moderate to High Habitability Potential)
+      PCA Components: [-1.873, 1.568, -0.178]
+      Estimated Surface Temperature (K): 1004.4
+      Surface Gravity (Earth g): 1.00
+      Water Retention Potential: 0.000
+      Radiation Hazard Index: 1.000</pre> -->
       
       <div class="container-fluid">
         <form class="form-inline">
