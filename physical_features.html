@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Physical Features | Cosmic LifeMapper</title>
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="ionicons/css/ionicons.min.css">
+  <link rel="stylesheet" href="sweetalert/dist/sweetalert.css">
+  <link rel="stylesheet" href="css/stisla.css">
+  <link rel="stylesheet" href="css/redirect.css">
+  <link rel="stylesheet" href="css/physical.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg main-navbar">
+    <div class="container-fluid">
+      <a class="navbar-brand text-white" href="#">LifeMapper</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+        <span class="navbar-toggler-icon">
+          <i class="ion-navicon"></i>
+        </span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a class="nav-link smooth-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link smooth-link" href="team.html">Team</a></li>
+          <li class="nav-item"><a class="nav-link smooth-link" href="#">Compare</a></li>
+        </ul>
+        
+      </div>
+    </div>
+  </nav>
+
+  <section class="h">
+    <video autoplay muted loop playsinline class="background-video">
+      <source src="./Background/yt1z.net - 4K Galaxy, Nebula Motion Background ,Milky Way, Free Video Background (2160p).mp4" type="video/mp4">
+    </video>
+    <div class="overlay"></div>
+
+    <!-- Left Transparent Box -->
+    <div class="left-overlay-box">
+      <h2 class="text-white mb-4">Physical Features</h2>
+      <input id="planetSearch" type="text" class="form-control search-bar mb-4" placeholder="Search for an exoplanet...">
+
+      <!-- <div id="planetData" class="report-box"> -->
+        <!-- Placeholder Report -->
+        <pre class="text-white">
+=== Exoplanet Report: Kepler-62b ===
+Planet Radius (Earth radii): 1.00
+Planet Mass (Earth masses): 1.00
+Star Effective Temperature (K): 4925.0
+Orbital Distance (AU): 0.050
+Orbital Eccentricity: 0.020
+Atmospheric Pressure (Earth atm): 1.00
+Albedo: 0.20
+Stellar Luminosity (Solar units): 0.210
+Host Star Metallicity [Fe/H]: 0.000
+Host Star Age (Gyr): 6.20
+Habitability Score: 0.000
+Cluster Assignment: 1 (Moderate to High Habitability Potential)
+PCA Components: [-1.873, 1.568, -0.178]
+Estimated Surface Temperature (K): 1004.4
+Surface Gravity (Earth g): 1.00
+Water Retention Potential: 0.000
+Radiation Hazard Index: 1.000</pre>
+      
+      <div class="container-fluid">
+        <form class="form-inline">
+          <a href="habitability.html" class="btn smooth-link align-middle btn-primary">Habitability Score</a>
+        </form>
+      </div>
+    </div>
+
+    <!-- Right Simulation Space -->
+    <div class="simulation-placeholder">
+      <!-- JS or canvas simulation placeholder -->
+    </div>
+  </section>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="bootstrap/js/bootstrap.min.js"></script>
+  <script src="js/physical.js"></script>
+</body>
+</html>
